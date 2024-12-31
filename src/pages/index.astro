@@ -1,26 +1,30 @@
 ---
-import "../styles/globals.css";
+import "@/styles/globals.css";
 
 import Navigation from "@/components/navigation.astro";
 import { Button } from "@/components/ui/button";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body class="flex flex-col min-h-screen relative bg-background text-foreground font-sans antialiased">
-		<Navigation />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body
+    class="flex flex-col min-h-screen relative bg-background text-foreground font-sans antialiased"
+  >
+    <Navigation />
 
-		<main class="flex-1">
-			<section class="container">
-				<h1>Hi 👋 I&apos;m Boonyarit,</h1>
-				<Button>Click me</Button>
-			</section>
-		</main>
-	</body>
+    <main class="flex-1">
+      <div class="bg-muted">
+        <section class="container py-12 space-y-4">
+          <h1>Hi 👋 I&apos;m Boonyarit,</h1>
+          <Button>Click me</Button>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>

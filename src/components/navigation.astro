@@ -1,4 +1,6 @@
 ---
+import "@/styles/globals.css";
+
 const navigations = [
   { label: "Home", href: "/" },
   { label: "Blog", href: "/blog" },
@@ -6,10 +8,10 @@ const navigations = [
 ];
 ---
 
-<nav>
-  {
-    navigations.map((item) => (
-      <a href={item.href}>{item.label}</a>
-    ))
-  }
-</nav>
+<header>
+  <div class="container flex justify-between items-center h-14">
+    <nav class="flex items-center gap-4">
+      {navigations.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+  </div>
+</header>
