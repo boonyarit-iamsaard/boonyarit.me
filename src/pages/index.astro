@@ -1,7 +1,8 @@
 ---
-import "../styles/global.css";
+import "../styles/globals.css";
 
-import Navigation from "../components/navigation.astro";
+import Navigation from "@/components/navigation.astro";
+import { Button } from "@/components/ui/button";
 ---
 
 <html lang="en">
@@ -12,9 +13,14 @@ import Navigation from "../components/navigation.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
+	<body class="flex flex-col min-h-screen relative bg-background text-foreground font-sans antialiased">
 		<Navigation />
 
-		<h1>Hi 👋 I&apos;m Boonyarit,</h1>
+		<main class="flex-1">
+			<section class="container">
+				<h1>Hi 👋 I&apos;m Boonyarit,</h1>
+				<Button>Click me</Button>
+			</section>
+		</main>
 	</body>
 </html>
