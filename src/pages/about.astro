@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css";
+
+import Navigation from "../components/navigation.astro";
+
 const pageTitle = "About";
 const identity = {
 	name: "Boonyarit Iamsa-ard",
@@ -20,16 +23,17 @@ const identity = {
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/blog">Blog</a>
-		<a href="/about">About</a>
+		<Navigation />
 
 		<h1>{pageTitle}</h1>
+
 		<p>
 			Hi 👋 I&apos;m {identity.name}, a developer. I&apos;m a
 			developer with a passion for building web applications.
 		</p>
+
 		<h2>Skills</h2>
+
 		<ul>
 			{identity.skills.map((skill) => <li>{skill}</li>)}
 		</ul>

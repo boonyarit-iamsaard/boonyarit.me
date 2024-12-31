@@ -1,0 +1,16 @@
+---
+export const componentName = "Navigation";
+export const navigation = [
+  { label: "Home", href: "/" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
+];
+---
+
+<nav>
+  {
+    navigation.map((item) => (
+      <a href={item.href}>{item.label}</a>
+    ))
+  }
+</nav>
