@@ -1,5 +1,14 @@
 ---
-
+import "../styles/global.css";
+const pageTitle = "About";
+const identity = {
+	name: "Boonyarit Iamsa-ard",
+	location: "Bangkok, Thailand",
+	email: "boonyarit.iamsaard@gmail.com",
+	github: "https://github.com/boonyarit-iamsaard",
+	linkedin: "https://www.linkedin.com/in/boonyarit-iamsaard",
+	skills: ["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Docker", "SQL", "NoSQL"],
+};
 ---
 
 <html lang="en">
@@ -8,13 +17,21 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/">Home</a>
 		<a href="/blog">Blog</a>
 		<a href="/about">About</a>
 
-		<h1>About</h1>
+		<h1>{pageTitle}</h1>
+		<p>
+			Hi 👋 I&apos;m {identity.name}, a developer. I&apos;m a
+			developer with a passion for building web applications.
+		</p>
+		<h2>Skills</h2>
+		<ul>
+			{identity.skills.map((skill) => <li>{skill}</li>)}
+		</ul>
 	</body>
 </html>
